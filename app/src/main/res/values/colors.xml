@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="Blueish">#B9D0E2</color>
+    <color name="Aquastic">#7E9DCA</color>
+    <color name="background_blue">#F2F6FE</color>
+    <color name="card_blue">#FFFFFF</color>
+    <color name="accent_blue">#417BEF</color>
+    <color name="text_primary">#0D1B34</color>
+    <color name="text_secondary">#8A94A6</color>
+    <color name="orange_light">#FFE8D6</color>
+    <color name="orange_dark">#FF8C42</color>
+    <color name="chart_blue_primary">#3498db</color>
+    <color name="chart_blue_secondary">#a9cce3</color>
+    <color name="button_blue">#0099FF</color>
+    <color name="blue_primary">#2196F3</color>
+
+
+    <color name="purple_500">#FF6200EE</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+
+
+    <!-- Red Warning Colors -->
+    <color name="red_light">#FFCDD2</color>
+    <color name="red_dark">#B71C1C</color>
+</resources>

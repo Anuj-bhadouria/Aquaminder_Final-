@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F2F6FE"
+    android:padding="24dp"
+    android:gravity="center_horizontal"
+    tools:context=".ProfileActivity">
+
+    <!-- Title Header similar to Login Page -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Profile"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:textColor="@color/text_primary"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Manage your account details"
+        android:textSize="16sp"
+        android:textColor="@color/text_secondary"
+        android:layout_marginBottom="32dp"/>
+
+    <!-- Form Container (Removed the heavy CardView wrapper for a cleaner look) -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/et_name"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:hint="Name"
+                android:background="@drawable/bg_edittext"
+                android:drawablePadding="12dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/text_secondary"
+                android:layout_marginBottom="16dp"
+                android:inputType="textPersonName"/>
+
+            <EditText
+                android:id="@+id/et_email"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:hint="Email"
+                android:background="@drawable/bg_edittext"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/text_secondary"
+                android:layout_marginBottom="16dp"
+                android:inputType="textEmailAddress"/>
+
+            <EditText
+                android:id="@+id/et_phone"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:hint="Phone"
+                android:background="@drawable/bg_edittext"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/text_secondary"
+                android:layout_marginBottom="16dp"
+                android:inputType="phone"/>
+
+            <EditText
+                android:id="@+id/et_address"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:hint="Address"
+                android:background="@drawable/bg_edittext"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/text_secondary"
+                android:layout_marginBottom="16dp"
+                android:inputType="textPostalAddress"/>
+
+            <EditText
+                android:id="@+id/et_pincode"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:hint="Pincode"
+                android:background="@drawable/bg_edittext"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/text_secondary"
+                android:layout_marginBottom="24dp"
+                android:inputType="number"/>
+
+            <!-- Hidden fields kept as requested -->
+            <EditText
+                android:id="@+id/et_hourly_rate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"/>
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/sw_availability"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+
+            <!-- Action Buttons -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnUpdate"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="Update"
+                android:textAllCaps="false"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.02"
+                android:textColor="@android:color/white"
+                app:backgroundTint="#0EA5E9"
+                app:cornerRadius="16dp"
+                android:layout_marginTop="24dp"
+                app:iconGravity="textEnd"
+                app:iconTint="@android:color/white"
+                android:stateListAnimator="@null"
+                android:elevation="4dp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/Logout"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="Logout"
+                android:textAllCaps="false"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.02"
+                android:textColor="@android:color/white"
+                app:backgroundTint="#0EA5E9"
+                app:cornerRadius="16dp"
+                android:layout_marginTop="24dp"
+
+                app:iconGravity="textEnd"
+                app:iconTint="@android:color/white"
+                android:stateListAnimator="@null"
+                app:layout_constraintTop_toBottomOf="@id/Logout"
+                android:elevation="4dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

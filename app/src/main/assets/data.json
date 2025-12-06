@@ -1,0 +1,12 @@
+[
+  { "sensor": { "flowRate": 2.15, "totalVolume": 5.47 } },
+  { "sensor": { "flowRate": 2.68, "totalVolume": 7.32 } },
+  { "sensor": { "flowRate": 3.02, "totalVolume": 9.14 } },
+  { "sensor": { "flowRate": 3.24, "totalVolume": 12.78 } },
+  { "sensor": { "flowRate": 2.89, "totalVolume": 15.62 } },
+  { "sensor": { "flowRate": 3.56, "totalVolume": 18.10 } },
+  { "sensor": { "flowRate": 3.90, "totalVolume": 21.54 } },
+  { "sensor": { "flowRate": 4.12, "totalVolume": 25.70 } },
+  { "sensor": { "flowRate": 3.75, "totalVolume": 29.43 } },
+  { "sensor": { "flowRate": 2.95, "totalVolume": 31.88 } }
+]

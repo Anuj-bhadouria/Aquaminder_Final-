@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "314988452012",
+    "firebase_url": "https://aquaminder-1-default-rtdb.firebaseio.com",
+    "project_id": "aquaminder-1",
+    "storage_bucket": "aquaminder-1.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:314988452012:android:87419343bccbabe6b6e709",
+        "android_client_info": {
+          "package_name": "com.example.flowMoniter"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCnGF3dn-0VywMwGVXeS3CyYz_wRNdH01g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:314988452012:android:221cf89d99b5ea5cb6e709",
+        "android_client_info": {
+          "package_name": "com.iar.myapplication"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCnGF3dn-0VywMwGVXeS3CyYz_wRNdH01g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
