@@ -45,7 +45,7 @@ public class PlumberProfileActivity extends AppCompatActivity {
         btnCall = findViewById(R.id.btn_call_plumber);
         btnRate = findViewById(R.id.btn_rate_plumber);
 
-        plumberUid = getIntent().getStringExtra("PLUMBER_UID");
+        plumberUid = getIntent().getStringExtra("plumberId");
 
         if (plumberUid == null) {
             Toast.makeText(this, "Error: Invalid Plumber", Toast.LENGTH_SHORT).show();
@@ -98,7 +98,7 @@ public class PlumberProfileActivity extends AppCompatActivity {
 
     private void setupBottomNavigation() {
         BottomNavigationView bottomNav = findViewById(R.id.bottom_navigation_plumber);
-        // We don't have a dedicated menu item for this screen, so we won't set it as selected.
+
         bottomNav.setOnItemSelectedListener(item -> {
             int itemId = item.getItemId();
             if (itemId == R.id.nav_plumber_dashboard) {

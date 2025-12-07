@@ -248,7 +248,18 @@ public class Dashboard extends AppCompatActivity {
                     if (totalVolume == null) totalVolume = 0.0;
                     if (status == null) status = "SAFE";
 
-                    mHistoryDb.push().setValue(new SensorHistoryEntry(flowRate, totalVolume, status, System.currentTimeMillis()));
+                    long currenTime= System.currentTimeMillis();
+                    SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss",Locale.getDefault());
+                    String formattedDate= sdf.format(new Date(currenTime));
+
+
+                    mHistoryDb.push().setValue(new SensorHistoryEntry(
+                            flowRate,
+                            totalVolume,
+                            status,
+                            currenTime,
+                            formattedDate
+                    ));
                 }
             }
 
@@ -258,19 +269,25 @@ public class Dashboard extends AppCompatActivity {
     }
 
     public static class SensorHistoryEntry {
+
         public double flowRate;
         public double totalVolume;
         public String status;
         public long timestamp;
+        public String readableTime;
 
         public SensorHistoryEntry() {}
-        public SensorHistoryEntry(double flowRate, double totalVolume, String status, long timestamp) {
+
+
+        public SensorHistoryEntry(double flowRate, double totalVolume, String status, long timestamp, String readableTime) {
             this.flowRate = flowRate;
             this.totalVolume = totalVolume;
             this.status = status;
             this.timestamp = timestamp;
+            this.readableTime = readableTime;
         }
     }
+
 
     private void setupGraphToggles() {
         toggleWaterFlow.addOnButtonCheckedListener((group, checkedId, isChecked) -> {
@@ -485,11 +502,17 @@ public class Dashboard extends AppCompatActivity {
         }
 
         if (overheadUsage == 0) overheadUsage = 5f;
+        long threeHourBlock = System.currentTimeMillis() / (1000 * 60 * 60 * 3);
+        java.util.Random random = new java.util.Random(threeHourBlock);
+        float undergroundVal = 20f + random.nextInt(30);
+        float mainLineVal = 10f + random.nextInt(20);
+
+
 
 
         entries.add(new PieEntry(overheadUsage, "Overhead"));
-        entries.add(new PieEntry(25f, "Underground"));
-        entries.add(new PieEntry(15f, "Main Line"));
+        entries.add(new PieEntry(undergroundVal, "Underground"));
+        entries.add(new PieEntry(mainLineVal, "Main Line"));
 
 
         PieDataSet dataSet = new PieDataSet(entries, "Usage Breakdown");
@@ -581,7 +604,7 @@ public class Dashboard extends AppCompatActivity {
                         activeRequestId = snapshot.getKey();
                         cardPlumberRequest.setVisibility(View.VISIBLE);
                         tvRequestStatus.setText("Status: " + request.getStatus());
-                        // Fetch plumber details
+
                         DatabaseReference plumberRef = FirebaseDatabase.getInstance().getReference("users").child(request.getPlumberId());
                         plumberRef.addListenerForSingleValueEvent(new ValueEventListener() {
                             @Override

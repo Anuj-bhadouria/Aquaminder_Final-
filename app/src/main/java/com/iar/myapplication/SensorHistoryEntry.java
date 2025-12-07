@@ -6,11 +6,15 @@ public class SensorHistoryEntry {
     public String status;
     public long timestamp;
 
+    public String readableTime;
+
     public SensorHistoryEntry() {}
     public SensorHistoryEntry(double flowRate, double totalVolume, String status, long timestamp) {
         this.flowRate = flowRate;
         this.totalVolume = totalVolume;
         this.status = status;
         this.timestamp = timestamp;
+        this.readableTime=readableTime;
+
     }
 }
