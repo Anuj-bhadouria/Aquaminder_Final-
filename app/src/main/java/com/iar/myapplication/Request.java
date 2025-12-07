@@ -21,6 +21,7 @@ public class Request {
         this.status = status;
         this.address = address;
         this.userContact = userContact;
+        this.requestId = requestId;
     }
 
     public String getRequestId() { return requestId; }

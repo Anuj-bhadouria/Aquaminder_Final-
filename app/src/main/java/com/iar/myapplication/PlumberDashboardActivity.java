@@ -81,7 +81,7 @@ public class PlumberDashboardActivity extends AppCompatActivity implements Reque
 
         requestAdapter = new RequestAdapter(requestList, request -> {
             Intent intent = new Intent(PlumberDashboardActivity.this, RequestDetailsActivity.class);
-            intent.putExtra("REQUEST_ID", request.getRequestId());
+            intent.putExtra("requestId", request.getRequestId());
             startActivity(intent);
         });
         requestAdapter.setOnRequestActionListener(this);
