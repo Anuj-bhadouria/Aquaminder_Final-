@@ -2,6 +2,7 @@ package com.iar.myapplication;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -66,6 +67,12 @@ public class PlumberDashboardActivity extends AppCompatActivity implements Reque
 
         ImageView ivProfile = findViewById(R.id.iv_profile);
         ivProfile.setOnClickListener(v -> startActivity(new Intent(PlumberDashboardActivity.this, ProfileActivity.class)));
+
+        Button btnOpenCamera = findViewById(R.id.btn_open_camera);
+        btnOpenCamera.setOnClickListener(v -> {
+            Intent intent = new Intent(PlumberDashboardActivity.this, OtgCameraActivity.class);
+            startActivity(intent);
+        });
 
         TextView tvWelcome = findViewById(R.id.tv_welcome);
 

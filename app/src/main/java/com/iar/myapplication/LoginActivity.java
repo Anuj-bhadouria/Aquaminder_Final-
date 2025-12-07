@@ -53,8 +53,8 @@ public class LoginActivity extends AppCompatActivity {
         findViewById(R.id.tvWelcome).startAnimation(fadeInUp);
         findViewById(R.id.tvSubtitle).startAnimation(fadeInUp);
         findViewById(R.id.cardLogin).startAnimation(fadeInUp);
-        findViewById(R.id.layoutOr).startAnimation(fadeInUp);
-        findViewById(R.id.btnGoogle).startAnimation(fadeInUp);
+//        findViewById(R.id.layoutOr).startAnimation(fadeInUp);
+//        findViewById(R.id.btnGoogle).startAnimation(fadeInUp);
 
         btnContinue.setOnClickListener(v -> loginUser());
 
